@@ -1,0 +1,26 @@
+{
+  "name": "casino",
+  "version": "0.0.1",
+  "description": "test data generator",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karel-rehor/casino.git"
+  },
+  "author": "karel-rehor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karel-rehor/casino/issues"
+  },
+  "homepage": "https://github.com/karel-rehor/casino#readme",
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "dependencies": {
+    "@influxdata/influxdb-client": "^1.4.0",
+    "node-emoji": "^1.10.0"
+  }
+}
