@@ -39,7 +39,7 @@ class InfluxDBClient{
     async queryData(query = `from(bucket: "${this.bucket}") |> range(start: -1h)`){
         const queryApi = this.client.getQueryApi(this.org)
 
-        console.log("DEBUG querying: " + query);
+//        console.log("DEBUG querying: " + query);
 
         let result = [];
 
@@ -64,48 +64,3 @@ class InfluxDBClient{
 }
 
 module.exports = InfluxDBClient;
-
-/* --- Write Data --- */
-
-/*
-const {Point} = require('@influxdata/influxdb-client')
-const writeApi = client.getWriteApi(org, bucket)
-
-
-const point = new Point('mem')
-    .floatField('used_percent', 23.43234543)
-writeApi.writePoint(point)
-writeApi
-    .close()
-    .then(() => {
-        console.log('FINISHED')
-    })
-    .catch(e => {
-        console.error(e)
-        console.log('\nFinished ERROR')
-    })
-*/
-
-
-/* --- Execute a Flux Query --- */
-
-/*
-const queryApi = client.getQueryApi(org)
-
-const query = `from(bucket: "${bucket}") |> range(start: -1h)`
-queryApi.queryRows(query, {
-    next(row, tableMeta) {
-        const o = tableMeta.toObject(row)
-        console.log(
-            `${o._time} ${o._measurement} in '${o.location}' (${o.example}): ${o._field}=${o._value}`
-        )
-    },
-    error(error) {
-        console.error(error)
-        console.log('\nFinished ERROR')
-    },
-    complete() {
-        console.log('\nFinished SUCCESS')
-    },
-})
-*/

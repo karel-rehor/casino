@@ -11,9 +11,11 @@
   "verbose": true,
   "influxClient": {
     "url": "http://localhost:9999",
-    "orgId": "0601a71f8bb3b000",
+    "orgId": "0602ec891c313000",
     "bucket": "qa",
     "token": "ENV",
     "writeRate": 10
-  }
+  },
+  "logdir": "./log",
+  "logclean": 600000
 }
