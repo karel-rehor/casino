@@ -20,7 +20,7 @@
     "jest": "^26.1.0"
   },
   "dependencies": {
-    "@influxdata/influxdb-client": "^1.4.0",
+    "@influxdata/influxdb-client": "^1.13.0",
     "node-emoji": "^1.10.0"
   }
 }
